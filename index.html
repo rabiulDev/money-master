@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP CSS LINK  -->
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/css/style.css" />
+    <title>DailyCost</title>
+  </head>
+  <body>
+    <!-- DAILY COST CALCULATOR MAIN SECTION -->
+    <main class="container h-100 mt-5 p-4">
+      <h2 class="header-text text-center">Daily Cost Calculator 💰</h2>
+      <div class="mt-5 h-100">
+        <div class="row g-4">
+          <!-- IMAGE SECTION  -->
+          <div class="col-sm-12 col-lg-6">
+            <img
+              class="img-fluid h-100 w-100"
+              src="images/header.jpg"
+              alt="bank-image"
+            />
+          </div>
+
+          <!-- CALCULATOR SECTION  -->
+          <div class="col-sm-12 col-lg-6 bg-light p-5">
+            <div class="cal-body ms-2">
+              <!-- INCONE SECTION  -->
+              <h3 class="cal-header-text mb-3">Income</h3>
+              <div class="row mb-3">
+                <label
+                  for="income-money"
+                  class="col-sm-2 col-form-label col-form-label-sm label-text"
+                >
+                  Income:
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="income-money"
+                  />
+                </div>
+              </div>
+
+              <!-- EXPENSES SECTION  -->
+              <h3 class="cal-header-text mb-3">Expenses</h3>
+              <div class="row mb-3">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-2 col-form-label col-form-label-sm label-text"
+                >
+                  Food:
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="colFormLabelSm"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-2 col-form-label col-form-label-sm label-text"
+                >
+                  Rent:
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="colFormLabelSm"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-2 col-form-label col-form-label-sm label-text"
+                >
+                  Clothes:
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="colFormLabelSm"
+                  />
+                </div>
+              </div>
+
+              <!-- ERROR MESSAGE  -->
+              <p class="label-text" id="err-message"></p>
+              <button
+                type="button"
+                class="btn btn-info px-5 d-block mx-auto mb-4"
+                id="calculate"
+              >
+                Calculate
+              </button>
+              <!-- TOTAL EXPENSES  -->
+              <h3 class="cal-header-text mb-3">
+                Total Expenses: <span>500</span>
+              </h3>
+              <!-- TOTAL BALANCE  -->
+              <h3 class="cal-header-text mb-5">Balance: <span>1500</span></h3>
+
+              <!-- SAVING SECTION  -->
+              <div class="row mb-3">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-2 col-form-label col-form-label-sm label-text"
+                >
+                  Save:
+                </label>
+                <div class="col-sm-2">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="colFormLabelSm"
+                  />
+                </div>
+                <span class="percentage col-sm-1">%</span>
+                <button type="button" class="btn btn-info col-sm-4 py-0 mb-4">
+                  Save
+                </button>
+              </div>
+
+              <!-- SAVING AMOUN  -->
+              <h3 class="cal-header-text mb-3">
+                Saving Amount: <span>1500</span>
+              </h3>
+
+              <!-- REMAINING BALANCE  -->
+              <h3 class="cal-header-text mb-5">
+                Remaining Balance: <span>1500</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- JS FILE LINKED  -->
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
