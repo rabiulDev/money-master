@@ -127,19 +127,24 @@
                   />
                 </div>
                 <span class="percentage col-sm-1">%</span>
-                <button type="button" class="btn btn-info col-sm-4 py-0 mb-4">
+                <button
+                  type="button"
+                  class="btn btn-info col-sm-4 py-0 mb-4"
+                  id="save-button"
+                >
                   Save
                 </button>
               </div>
-
+              <!-- ERROR MESSAGE  -->
+              <p class="label-text" id="save-err-message"></p>
               <!-- SAVING AMOUN  -->
               <h3 class="cal-header-text mb-3">
-                Saving Amount: <span>1500</span>
+                Saving Amount: <span id="saving-amount">00</span>
               </h3>
 
               <!-- REMAINING BALANCE  -->
               <h3 class="cal-header-text mb-5">
-                Remaining Balance: <span>1500</span>
+                Remaining Balance: <span id="remaining-balance">00</span>
               </h3>
             </div>
           </div>

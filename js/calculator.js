@@ -12,6 +12,7 @@ function setValue(id) {
 }
 
 // HANDLE CALCULATE BUTTON 
+let totalBalance;
 
 document.getElementById('calculate').addEventListener('click',
     function () {
@@ -48,6 +49,7 @@ document.getElementById('calculate').addEventListener('click',
             const totalExpense = allExpenses;
             document.getElementById("total-expenses").innerText = totalExpense;
             const balance = incomeMoney - totalExpense;
+            totalBalance = balance;
             document.getElementById("balance").innerText = balance;
 
             // change input field value 
@@ -58,9 +60,37 @@ document.getElementById('calculate').addEventListener('click',
             setValue("cloth-field");
         }
 
-
-
-
-
     }
 )
+
+// HANDLE SAVE BUTTON 
+
+function percentage(num, per) {
+    return (num / 100) * per;
+}
+
+document.getElementById("save-button").addEventListener('click', function () {
+    const percent = getInputNumber("save-amount")
+    const percentageValue = percentage(totalBalance, percent)
+    const remainingBalance = totalBalance - percentageValue;
+    if (isNaN(percent) || percent < 0) {
+        document.getElementById("save-err-message").innerText = "Please give a positive number as a saving value."
+        // RESET VALUE 
+        setValue("save-amount")
+        document.getElementById("saving-amount").innerText = "00";
+        document.getElementById("remaining-balance").innerText = "00";
+    }
+    else if (totalBalance < percentageValue) {
+        document.getElementById("save-err-message").innerText = "You haven't not enough money for saving"
+        // RESET VALUE 
+        setValue("save-amount")
+    }
+    else {
+        document.getElementById("saving-amount").innerText = percentageValue;
+        document.getElementById("remaining-balance").innerText = remainingBalance;
+
+        // RESET VALUE 
+        setValue("save-amount")
+        document.getElementById("save-err-message").innerText = ""
+    }
+})
