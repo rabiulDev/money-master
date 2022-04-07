@@ -84,6 +84,8 @@ document.getElementById("save-button").addEventListener('click', function () {
         document.getElementById("save-err-message").innerText = "Sorry you haven't not enough balance for saving"
         // RESET VALUE 
         setValue("save-amount")
+        document.getElementById("saving-amount").innerText = "00";
+        document.getElementById("remaining-balance").innerText = "00";
     }
     else {
         document.getElementById("saving-amount").innerText = percentageValue;
