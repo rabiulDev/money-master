@@ -36,7 +36,7 @@ document.getElementById('calculate').addEventListener('click',
             document.getElementById("balance").innerText = "00"
         }
         else if (incomeMoney < allExpenses) {
-            document.getElementById("err-message").innerText = "You haven't enough money."
+            document.getElementById("err-message").innerText = "Sorry you haven't enough balance."
             // change input field value 
             setValue("income-field");
             setValue("food-field");
@@ -81,7 +81,7 @@ document.getElementById("save-button").addEventListener('click', function () {
         document.getElementById("remaining-balance").innerText = "00";
     }
     else if (totalBalance < percentageValue) {
-        document.getElementById("save-err-message").innerText = "You haven't not enough money for saving"
+        document.getElementById("save-err-message").innerText = "Sorry you haven't not enough balance for saving"
         // RESET VALUE 
         setValue("save-amount")
     }
