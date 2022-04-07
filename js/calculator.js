@@ -25,7 +25,7 @@ document.getElementById('calculate').addEventListener('click',
 
         const allExpenses = foodMoney + rentMoney + clothMoney;
 
-        if (isNaN(incomeMoney) || isNaN(allExpenses) || incomeMoney < 0 || allExpenses < 0) {
+        if (isNaN(incomeMoney) || isNaN(allExpenses) || incomeMoney < 0 || foodMoney < 0 || rentMoney < 0 || clothMoney < 0) {
             document.getElementById("err-message").innerText = "Please fillup all the field as a positive number."
             // change input field value 
             setValue("income-field");
