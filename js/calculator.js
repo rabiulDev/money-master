@@ -2,9 +2,9 @@ function getInputNumber(id) {
     const element = document.getElementById(id).value;
     const valueAsNumber = parseFloat(element);
 
-    if (typeof valueAsNumber != "number" || valueAsNumber < 0) {
-        const errMassage = document.getElementById("err-message")
-        errMassage.innerText = "Please give a positive Number.";
+    if (isNaN(valueAsNumber) || valueAsNumber < 0) {
+        const errMassage = true;
+        return errMassage;
     }
     else {
         return valueAsNumber;
