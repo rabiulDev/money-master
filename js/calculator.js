@@ -25,7 +25,7 @@ document.getElementById('calculate').addEventListener('click',
         const allExpenses = foodMoney + rentMoney + clothMoney;
 
         if (isNaN(incomeMoney) || isNaN(allExpenses) || incomeMoney < 0 || allExpenses < 0) {
-            document.getElementById("err-message").innerText = "Please give all the number as a positive value"
+            document.getElementById("err-message").innerText = "Please fillup all the field as a positive number."
             // change input field value 
             setValue("income-field");
             setValue("food-field");
@@ -35,7 +35,12 @@ document.getElementById('calculate').addEventListener('click',
             document.getElementById("balance").innerText = "00"
         }
         else if (incomeMoney < allExpenses) {
-            document.getElementById("err-message").innerText = "You haven't enough money "
+            document.getElementById("err-message").innerText = "You haven't enough money."
+            // change input field value 
+            setValue("income-field");
+            setValue("food-field");
+            setValue("rent-field");
+            setValue("cloth-field");
             document.getElementById("total-expenses").innerText = "00"
             document.getElementById("balance").innerText = "00"
         }
